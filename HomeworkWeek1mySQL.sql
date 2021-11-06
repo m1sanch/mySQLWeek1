@@ -52,8 +52,8 @@ Select emp_no, first_name, last_name FROM employees
 WHERE emp_no < 10000;
 
 -- deletes all employees who have an emp_no less than 10000
--- DELETE FROM employees 
--- WHERE emp_no < 10000;
+DELETE FROM employees 
+WHERE emp_no < 10000;
 
 -- Selects all employees who have an emp_no less than 10000 to validate changes
 -- Expecting a null response
@@ -65,10 +65,10 @@ Select emp_no, first_name, last_name FROM employees
 WHERE emp_no IN (10048, 10099, 10234, 20089);
 
 -- deletes all employees in list on line 65
--- DELETE FROM employees 
--- WHERE emp_no < 10000;
+DELETE FROM employees 
+WHERE emp_no IN (10048, 10099, 10234, 20089);
 
 -- Selects all employees from list on line 65 to validate changes
 -- Expecting a null response
 Select emp_no, first_name, last_name FROM employees 
-WHERE emp_no < 10000;
+WHERE emp_no IN (10048, 10099, 10234, 20089);
